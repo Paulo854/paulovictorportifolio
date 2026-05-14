@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Paulo Victor | Interactive Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="icone.svg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+        <div id="preloader">
+            <div class="loader-content">
+                <div class="volt-logo">⚡</div>
+                <div class="loader-bar">
+                    <div id="loader-fill"></div>
+                </div>
+                <p class="loader-status">INICIALIZANDO SISTEMAS...</p>
+                <span id="loader-percentage">0%</span>
+            </div>
+        </div>
+    <div id="ui-layer">
+        <div class="glass-panel premium-blur">
+            <div class="profile-pic-container">
+                <div class="hologram-ring"></div>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGRsvXc9yPXuw/profile-displayphoto-crop_800_800/B4DZx3TEUbI8AI-/0/1771528014630?e=1780531200&v=beta&t=fiQ8nQwqK4qERGWz0v9yR4W9DdvrCbWt_K2kMDvM_Po" alt="Paulo Victor" id="profile-pic">
+            </div>
+            <h1 class="glitch-text" data-text="Paulo Victor">Paulo Victor</h1>
+            <h2 class="subtitle">Desenvolvedor Full-stack</h2>
+            <div class="system-status">
+                <span>SYSTEM: ONLINE</span> | <span>ENGINES: STANDBY</span>
+            </div>
+            <button id="launch-btn" class="cyber-btn">INICIAR IGNIÇÃO</button>
+        </div>
+    </div>
+
+    <div id="hud-layer" class="hidden">
+        <div class="hud-top-left">
+            <div class="radar-container">
+                <div class="radar-sweep"></div>
+                <div class="radar-blip"></div>
+            </div>
+            <div class="coordinates">SEC: <span id="coord-x">000</span>.<span id="coord-z">000</span></div>
+        </div>
+        <div class="hud-center">
+            <div class="crosshair"></div>
+        </div>
+        <div class="hud-bottom">
+            <div class="speed-bar"><div class="speed-fill" id="speed-indicator"></div></div>
+            <div class="controls-hint">[W A S D] Navegar | [B] Blog | [E] Interagir</div>
+        </div>
+    </div>
+    <div id="blog-panel" class="hidden">
+        <div class="blog-glass">
+            <button class="close-blog" id="close-blog-btn">⨉ Fechar Terminal</button>
+            <div class="blog-header">
+                <h2>ARQUIVO PESSOAL DE PAULO VICTOR</h2>
+                <div class="tech-stack">
+                    <span class="badge">PHP</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">C#</span>
+                    <span class="badge">SQL</span>
+                    <span class="badge">MySql</span>
+                    <span class="badge">Azure</span>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="timeline-item">
+                    <h3>> Experiências(PT-BR) Experiences(ENG)</h3>
+                    <p>(PT-BR) Tenho experiência no desenvolvimento de projetos com foco em soluções reais e impacto social, unindo tecnologia e inovação para criar aplicações que geram valor e melhoram a experiência das pessoas.<br><br>(ENG) I have experience developing projects focused on real-world solutions and social impact, combining technology and innovation to create applications that generate value and improve people's experiences.</p>
+                </div>
+            <div class="timeline-item">
+                    <h3>> Stack Tecnológica</h3>
+                    <p>(PT-BR) Java, C#, PHP, JavaScript, SQL, Apache, Linux, Desenvolvimento Full Stack, Integração de APIs/Webhooks, Infraestrutura VPS, Git/GitHub, UI/UX e Gerenciamento de Banco de Dados.<br><br>(ENG) Java, C#, PHP, JavaScript, SQL, Apache, Linux, Full Stack Development, API/Webhook Integration, VPS Infrastructure, Git/GitHub, UI/UX, and Database Management.</p>
+                </div>
+                
+                <div class="terminal-socials">
+                    <a href="https://github.com/Paulo854" target="_blank" class="cyber-link link-github">
+                        <span class="link-icon">/></span> GITHUB
+                    </a>
+                    <a href="https://www.instagram.com/gamejp202/" target="_blank" class="cyber-link link-instagram">
+                        <span class="link-icon">@</span> INSTAGRAM
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="interaction-ui" class="hidden">
+        <div class="interaction-box">
+            <span class="key-hint cyber-glow">E</span>
+            <p id="interaction-text">Estabelecer Conexão</p>
+        </div>
+    </div>
+    
+    <div id="warp-flash"></div>
+    <div id="project-showcase" class="hidden">
+        <div class="showcase-glass">
+            <button id="close-project" class="cyber-btn-outline" style="margin-bottom: 2rem;">⨉ Abortar Conexão</button>
+            <h1 id="proj-title" class="neon-text">Projeto</h1>
+            <div class="tech-stack" id="proj-badges" style="margin-bottom: 2rem;"></div>
+            
+            <div class="slides-container">
+                <div class="slide active" id="slide-0">
+                    <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">01 // A CONCEPÇÃO</h3>
+                    <p id="proj-concept" style="color: #ccc; line-height: 1.8; font-size: 1.1rem;"></p>
+                </div>
+                <div class="slide" id="slide-1">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">02 // ENGENHARIA & ARQUITETURA</h3>
+                    <p id="proj-tech" style="color: #ccc; line-height: 1.8; font-size: 1.1rem;"></p>
+                </div>
+                <div class="slide" id="slide-2">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">03 // RESULTADO FINAL</h3>
+                    <p id="proj-result" style="color: #ccc; line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem;"></p>
+                    <a id="proj-repo-btn" href="" target="_blank" class="cyber-btn">Acessar Sistema</a>
+                </div>
+            </div>
+            <div class="slide-controls" style="display: flex; justify-content: space-between; margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                <button id="prev-slide" class="cyber-btn" style="opacity: 0.5;">Anterior</button>
+                <div id="slide-indicators" style="display: flex; gap: 10px; align-items: center;">
+                    <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                </div>
+                <button id="next-slide" class="cyber-btn">Próximo</button>
+            </div>
+        </div>        
+    </div>
+    <div class="global-copyright">
+        <span>© 2026 PAULO VICTOR NASCIMENTO CARDOSO. TODOS OS DIREITOS RESERVADOS.</span>
+    </div>
+    <canvas id="webgl-canvas"></canvas>
+    <script type="module" src="mainofusqued.js"></script>
+</body>
+</html>

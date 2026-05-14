@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo Sutil -->
+  <rect width="32" height="32" rx="8" fill="#030305"/>
+  
+  <!-- Brilho Neon (Glow) -->
+  <circle cx="16" cy="16" r="10" fill="#8B5CF6" fill-opacity="0.3" filter="blur(4px)"/>
+  
+  <!-- O Raio (Símbolo VOLTWEAR) -->
+  <path d="M19 4L9 18H15L13 28L23 14H17L19 4Z" fill="url(#paint0_linear)"/>
+  
+  <defs>
+    <linearGradient id="paint0_linear" x1="9" y1="4" x2="23" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00EEFF"/> <!-- Azul Neon -->
+      <stop offset="1" stop-color="#8B5CF6"/> <!-- Roxo Neon -->
+    </linearGradient>
+  </defs>
+</svg>
