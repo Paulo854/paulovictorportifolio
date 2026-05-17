@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paulo Victor | Interactive Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="icone.svg">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -57,6 +57,16 @@
             <div class="controls-hint">[W A S D] Navegar | [B] Blog | [E] Interagir</div>
         </div>
     </div>
+    <div id="mobile-warning" class="hidden">
+        <div class="mobile-warning-glass">
+            <div class="mobile-warning-icon">⚠</div>
+            <h2>AVISO DE SISTEMA</h2>
+            <p>Este portifólio foi projetado para experiência <strong>desktop-first</strong>. A navegação 3D e controles interativos exigem teclado (WASD + B + E).</p>
+            <p style="margin-top: 1rem; color: #888; font-size: 0.85rem;">Para a experiência completa, acesse por um computador.</p>
+            <button id="mobile-dismiss" class="cyber-btn" style="margin-top: 2rem; padding: 0.8rem 2rem; font-size: 0.85rem;">ENTENDIDO</button>
+        </div>
+    </div>
+
     <div id="blog-panel" class="hidden">
         <div class="blog-glass">
             <button class="close-blog" id="close-blog-btn">⨉ Fechar Terminal</button>
@@ -81,14 +91,15 @@
                     <p>(PT-BR) Java, C#, PHP, JavaScript, SQL, Apache, Linux, Desenvolvimento Full Stack, Integração de APIs/Webhooks, Infraestrutura VPS, Git/GitHub, UI/UX e Gerenciamento de Banco de Dados.<br><br>(ENG) Java, C#, PHP, JavaScript, SQL, Apache, Linux, Full Stack Development, API/Webhook Integration, VPS Infrastructure, Git/GitHub, UI/UX, and Database Management.</p>
                 </div>
                 
-                <div class="terminal-socials">
-                    <a href="https://github.com/Paulo854" target="_blank" class="cyber-link link-github">
-                        <span class="link-icon">/></span> GITHUB
-                    </a>
-                    <a href="https://www.instagram.com/gamejp202/" target="_blank" class="cyber-link link-instagram">
-                        <span class="link-icon">@</span> INSTAGRAM
-                    </a>
-                </div>
+            </div>
+            
+            <div class="terminal-socials">
+                <a href="https://github.com/Paulo854" target="_blank" class="cyber-link link-github">
+                    <span class="link-icon">/></span> GITHUB
+                </a>
+                <a href="https://www.instagram.com/gamejp202/" target="_blank" class="cyber-link link-instagram">
+                    <span class="link-icon">@</span> INSTAGRAM
+                </a>
             </div>
         </div>
     </div>
